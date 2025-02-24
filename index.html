@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,6 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun d-none"></i>
-                    </button>
-                </li>
             </ul>
         </div>
     </nav>
@@ -132,73 +126,5 @@
             <p>&copy; 2025 Harsh Vassaram. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Theme Switching Script -->
-    <script>
-    // Wait for the DOM to be fully loaded before executing
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get the toggle button
-        const themeToggle = document.getElementById('theme-toggle');
-        
-        // Only proceed if the button exists
-        if (themeToggle) {
-            // Apply saved theme on page load
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-                updateToggleIcon(savedTheme);
-            }
-            
-            // Add click event listener to the button
-            themeToggle.addEventListener('click', function() {
-                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                
-                // Update the theme
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                
-                // Update the icon
-                updateToggleIcon(newTheme);
-            });
-        } else {
-            console.error('Theme toggle button not found. Check the ID in your HTML.');
-        }
-        
-        // Function to update the toggle icon based on theme
-        function updateToggleIcon(theme) {
-            if (!themeToggle) return;
-            
-            const moonIcon = themeToggle.querySelector('.fa-moon');
-            const sunIcon = themeToggle.querySelector('.fa-sun');
-            
-            if (theme === 'dark') {
-                // Switch to sun icon for dark mode
-                if (moonIcon) moonIcon.classList.add('d-none');
-                if (sunIcon) {
-                    sunIcon.classList.remove('d-none');
-                } else {
-                    // If sun icon doesn't exist, create it
-                    const icon = document.createElement('i');
-                    icon.className = 'fas fa-sun';
-                    themeToggle.innerHTML = '';
-                    themeToggle.appendChild(icon);
-                }
-            } else {
-                // Switch to moon icon for light mode
-                if (sunIcon) sunIcon.classList.add('d-none');
-                if (moonIcon) {
-                    moonIcon.classList.remove('d-none');
-                } else {
-                    // If moon icon doesn't exist, create it
-                    const icon = document.createElement('i');
-                    icon.className = 'fas fa-moon';
-                    themeToggle.innerHTML = '';
-                    themeToggle.appendChild(icon);
-                }
-            }
-        }
-    });
-    </script>
 </body>
 </html>
