@@ -139,14 +139,12 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Hero Section (About) */
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--secondary-color), var(--dark-bg));
   color: var(--light-text);
   padding: 100px 0;
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
 .hero h1 {
@@ -166,8 +164,6 @@ nav ul li a:hover::after {
 /* Projects Section */
 .projects {
   padding: 80px 0;
-  display: flex;
-  justify-content: center;
 }
 
 .project-grid {
@@ -211,8 +207,6 @@ nav ul li a:hover::after {
 .skills {
   background-color: var(--light-bg);
   padding: 80px 0;
-  display: flex;
-  justify-content: center;
 }
 
 .skills-container {
