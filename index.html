@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Vassaram - Eportfolio</title>
+    <style>
+        /* Basic styling to get started */
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            color: black;
+            padding: 10px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero section */
+        .hero {
+            background-color: #f5f5f5;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Project section */
+        .projects {
+            padding: 40px 0;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Skills section */
+        .skills {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 20px;
+        }
+
+        .skill-category h3 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact section */
+        .contact {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-grid,
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav .container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 10px;
+                padding-left: 0;
+            }
+            
+            nav ul li {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>Your Name</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container">
+            <h1>Your Name</h1>
+            <p>Computer Science Student | Developer</p>
+            <p>I'm a passionate computer science student with interests in data science, software development, and UX/UI design.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            
+            <div class="project-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <h3>Data Science Project</h3>
+                    <p>A Python-based project that analyzes and visualizes data using mathematical tools.</p>
+                    <p><strong>Technologies used:</strong> Python, NumPy, Pandas, Matplotlib</p>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <h3>Java Application</h3>
+                    <p>A software application developed as part of my software analysis and design class.</p>
+                    <p><strong>Technologies used:</strong> Java, Spring, SQL</p>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <h3>UX/UI Design</h3>
+                    <p>User interface designs created for a human-computer interaction project.</p>
+                    <p><strong>Technologies used:</strong> Figma, Azure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <p>C++, Python, Java</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development Tools</h3>
+                    <p>VS Code, Git, GitHub</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Design Tools</h3>
+                    <p>Figma, Azure</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <p>Problem Solving, Data Analysis, UI/UX Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>Connect with me on <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> or check out my projects on <a href="https://github.com/yourusername" target="_blank">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
