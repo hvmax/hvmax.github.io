@@ -371,6 +371,11 @@ footer {
   color: var(--accent-color);
 }
 
+/* Utility class for hiding elements */
+.d-none {
+  display: none !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .project-grid,
