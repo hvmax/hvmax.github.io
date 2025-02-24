@@ -18,6 +18,11 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -106,7 +111,7 @@
                 </a>
                 
                 <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/harsh-vassaram" class="social-icon linkedin">
+                <a href="https://linkedin.com/in/harshvassaram" class="social-icon linkedin">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
@@ -126,5 +131,29 @@
             <p>&copy; 2025 Harsh Vassaram. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Theme Switching Script -->
+    <script>
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            // Set the theme on the HTML element
+            document.documentElement.setAttribute('data-theme', newTheme);
+            
+            // Save the theme preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Check for saved theme preference and apply it
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+        
+        // Add event listener to the theme toggle button
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    </script>
 </body>
 </html>
