@@ -1,2 +1,8 @@
-# hvmax.github.io
-eportfolio
+# Eportfolio
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
