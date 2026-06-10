@@ -16,7 +16,7 @@ export default function Hero() {
       {/* Action Links */}
       <div className="flex justify-center items-center gap-4">
         <a 
-          href="/Harsh_Vassaram_Resume.pdf" 
+          href="/Vassaram_Harsh_Resume.pdf" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="h-[44px] px-6 flex items-center justify-center border border-[rgba(255,255,255,0.07)] bg-[#161B22] text-[#F1F5F9] font-medium rounded-md hover:bg-gray-800 transition-colors focus:ring-2 focus:ring-[#7DD3FC] focus:ring-offset-2 focus:ring-offset-[#0D1117] outline-none"
